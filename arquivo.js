@@ -26,7 +26,7 @@ function limparResultado() {
 
 //Questão 3
 
-const caminhoDoArquivo = 'teste\dados.json'; // Supondo que o arquivo está no mesmo diretório
+const caminhoDoArquivo = './dados.json'; // Supondo que o arquivo está no mesmo diretório
 
 // Função para carregar os dados do arquivo JSON
 async function carregarDados() {
@@ -69,3 +69,56 @@ carregarDados().then(dados => {
 }).catch(erro => {
     console.error('Erro ao carregar os dados:', erro);
 });
+
+//Questão 4
+/// Objeto com os valores de faturamento por estado
+const dados = {
+    "SP": 67836.43,
+    "RJ": 36678.66,
+    "MG": 29229.88,
+    "ES": 27165.48,
+    "Outros": 19849.53
+};
+
+// Função para calcular o percentual
+function calcularPercentual(valorEstado, total) {
+    return (valorEstado / total) * 100;
+}
+
+// Função para exibir os resultados para um estado
+function calcularEstado(estado) {
+    const valorEstado = dados[estado];
+    const total = calcularTotal();
+    const percentual = calcularPercentual(valorEstado, total);
+    document.getElementById(`resultado${estado}`).innerHTML = `Percentual de representação: ${percentual.toFixed(2)}%`;
+}
+
+// Função para calcular o total
+function calcularTotal() {
+    // Some os valores de faturamento
+    const total = dados.SP + dados.RJ + dados.MG + dados.ES + dados.Outros;
+    return total;
+}
+
+// Funções para calcular e exibir os resultados para cada estado
+function calcularSP() {
+    calcularEstado('SP');
+}
+
+function calcularRJ() {
+    calcularEstado('RJ');
+}
+
+function calcularMG() {
+    calcularEstado('MG');
+}
+
+function calcularES() {
+    calcularEstado('ES');
+}
+
+function calcularOU() {
+    calcularEstado('Outros');
+}
+
+

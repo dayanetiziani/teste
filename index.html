@@ -16,11 +16,9 @@
         <button type="button" onclick="verificaNumero()">Verificar</button>
         <button type="button" onclick="limparResultado()">Limpar</button>
     </form>
-    
     <p id="resultado"></p>
 
     <hr>
- 
     <h1>Questão 3</h1>
     <form id="faturamentoDistri">
         <label for="mesMenorValor">O menor valor de faturamento ocorrido em um dia do mês:</label>
@@ -37,5 +35,32 @@
     
     </form>
     
+    <hr>
+    <h1>Questão 4</h1>
+    <h3>Saiba o percentual de representação que cada estado teve:</h3>
+    <form id="faturamentoPorcentagem">
+        <label for="sp">SP – R$67.836,43</label>
+        <button type="button" onclick="calcularSP()">Verificar</button><br>
+        <p id="resultadoSP"></p>
+
+        <label for="rj">RJ – R$36.678,66</label>
+        <button type="button" onclick="calcularRJ()">Verificar</button><br>
+        <p id="resultadoRJ"></p>
+
+        <label for="mg">MG – R$29.229,88</label>
+        <button type="button" onclick="calcularMG()">Verificar</button><br>
+        <p id="resultadoMG"></p>
+
+        <label for="es">ES – R$27.165,48</label>
+        <button type="button" onclick="calcularES()">Verificar</button><br>
+        <p id="resultadoES"></p>
+
+        <label for="ou">Outros – R$19.849,53</label>
+        <button type="button" onclick="calcularOU()">Verificar</button>
+        <p id="resultadoOU"></p>
+    
+    </form>
+    <hr>
+
 </body>
 </html>
