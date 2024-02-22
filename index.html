@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste</title>
     <script src="arquivo.js"></script>
+    <script src="dados.json"></script>
+
 </head>
 <body>
     <h1>Questão 2</h1>
@@ -18,6 +20,22 @@
     <p id="resultado"></p>
 
     <hr>
+ 
+    <h1>Questão 3</h1>
+    <form id="faturamentoDistri">
+        <label for="mesMenorValor">O menor valor de faturamento ocorrido em um dia do mês:</label>
+        <button type="button" onclick="calcularDados('menor')">Verificar</button><br>
+        <p id="resultado1"></p>
 
+        <label for="mesMaiorValor">O maior valor de faturamento ocorrido em um dia do mês:</label>
+        <button type="button" onclick="calcularDados('maior')">Verificar</button><br>
+        <p id="resultado2"></p>
+
+        <label for="numeroDiasSuperiorMediaMensal">Número de dias no mês em que o valor de faturamento diário foi superior à média mensal:</label>
+        <button type="button" onclick="calcularDados('superior')">Verificar</button>
+        <p id="resultado3"></p>
+    
+    </form>
+    
 </body>
 </html>
