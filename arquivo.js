@@ -121,4 +121,25 @@ function calcularOU() {
     calcularEstado('Outros');
 }
 
+//Questão 5
+function inverterString() {
+    // Obtém o valor da string a ser invertida do campo de entrada
+    let inputString = document.getElementById("invertido").value;
 
+    // Converte a string para um array de caracteres
+    let caracteres = inputString.split('');
+
+    // Inverte os caracteres no array
+    for (let i = 0; i < Math.floor(caracteres.length / 2); i++) {
+        // Troca os caracteres usando uma variável temporária
+        let temp = caracteres[i];
+        caracteres[i] = caracteres[caracteres.length - 1 - i];
+        caracteres[caracteres.length - 1 - i] = temp;
+    }
+
+    // Junta os caracteres de volta em uma string
+    let stringInvertida = caracteres.join('');
+
+    // Exibe a string invertida no campo de resultado
+    document.getElementById("StringInvertida").value = stringInvertida;
+}
